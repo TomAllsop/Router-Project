@@ -7,11 +7,11 @@ def send_mail(subject, msg):
         server = smtplib.SMTP('smtp.gmail.com:587')
         server.ehlo()
         server.starttls()
-        server.login("ishlong144@gmail.com", "123abcLong")#username, password
+        server.login("username@gmail.com", "password")#username, password
         message = 'Subject: {}\n\n{}'.format(subject, msg)
-        server.sendmail("ishlong144@gmail.com", "tallsop63@gmail.com", message)#my address, persons address, message
-        server.sendmail("ishlong144@gmail.com", "tobyratkinson@gmail.com", message)#my address, persons address, message
-        server.sendmail("ishlong144@gmail.com", "elj2001@hotmail.co.uk", message)#my address, persons address, message
+        server.sendmail("username@gmail.com", "housemate1@gmail.com", message)#my address, persons address, message
+        server.sendmail("username@gmail.com", "housemate2@gmail.com", message)#my address, persons address, message
+        server.sendmail("username@gmail.com", "housemate3@hotmail.co.uk", message)#my address, persons address, message
         server.quit()
         print("Success, email has been sent")
     except:
